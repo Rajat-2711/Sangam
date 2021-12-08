@@ -21,9 +21,8 @@ img{
 .home-logo {
     background-color: black;
     text-align: center;
-    height: 220px;
     max-height: fit-content;
-    padding: 2em 0 1em 0;
+    padding: 1.5em 0 1em 0;
 }
 .home-logo h1 a{
     padding-top: 30px;
@@ -159,7 +158,7 @@ h3.design {
     text-align: left;
     font-size: 3.3em;
     letter-spacing: 15px;
-    font-weight: 700;
+    font-weight: 400;
     margin-left: -9px;
 }
 
@@ -167,6 +166,18 @@ h3.design {
     margin-bottom: 170px;
     text-align: left;
     align-items: flex-start;
+}
+.image-wrapper {
+    position: relative;
+}
+.image-wrapper::before{
+    position: absolute;
+    left: 0px;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0,0, 0.4);
+    content: '';
 }
 .carousel-caption .delievery{
     font-weight: 700;
@@ -202,7 +213,7 @@ h2.blue-black-heading {
     font-weight: 300;
     font-family: 'Work Sans', sans-serif;
     color:inherit;
-    padding-left: 100px;
+    padding-left: 0px;
     text-align: center;
     vertical-align: middle;
     padding-top: 60px;
@@ -216,6 +227,19 @@ h2.blue-black-heading{
     position: relative;
     letter-spacing: 1px;
     font-family: 'Work Sans', sans-serif;
+}
+.service-icons .col-md-4:hover .pera p{
+    color: #fff;
+}
+.service-icons .col-md-4:hover .color-head h5{
+    color:#fff;
+}
+.service-icons .col-md-4:hover .fa{
+    background-color: #fff;
+    color: black;
+}
+.color-head h5{
+    color: #ffb910;
 }
 h2.blue-white-heading{
     color: #fff;
@@ -276,6 +300,7 @@ a.btn.btn-primary.btn-sm {
     border-radius: 0px;
     display: inline-block;
 }
+
 a.btn.btn-primary.btn-sm:hover{
     background-color:#337ab7;
 }
@@ -290,19 +315,15 @@ a.btn.btn-primary.btn-sm:hover{
     text-align: center;
 } */
 .service-icons .fa{
-    border: 1px solid #ffb910;
+    border: 1px solid #efefef;
     font-size: 2em;
     color: #fff;
     padding: 30px 30px;
     margin-top: 40px;
     justify-content: center;
 }
-.service-icons .fa:hover{
-    transition: ease-out .2s;
-    background-color: #fff;
-    color: black;
-}
 .service-icons{
+    cursor: pointer;
     text-align:center;
 }
 h5{
@@ -314,9 +335,9 @@ h5{
     text-align: center;
     color: #ffb910;
 }
-h5:hover{
+/* h5:hover{
     color: #fff;
-}
+} */
 .pera p{
     padding-top: 20px;
     text-align: center;
@@ -362,14 +383,38 @@ h5:hover{
 .social-icons .fa:hover{
     color: #ff9000;
 }
+.gallery{
+    margin-top: 50px;
+}
 .gallery .container-fluid {
     padding: 0px !important;
 }
-.gallery-image img {
-    padding-top: 50px;
+.gallery-col{
+    width: 25%;
+}
+.gallery-inner{
+    display: flex; 
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+.gallery-col img{
+    object-fit: cover;
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+}
+.gall-image{
+    overflow: hidden;
+}
+.gall-image img:hover{
+    transform: scale(1.2);
+}
+ .gallery-col:nth-child(1) img, .gallery-col:nth-child(3) img{
+    height: 550px;
+}
+.gallery-col:nth-child(2) img, .gallery-col:nth-child(4) img{
+    height: 275px;
 }
 .offers .col-md-6 {
-    /* padding-left: 0\; padding-left: 0p; */
     padding-left: 0px;
 }
 .offer-heading h4{
@@ -381,9 +426,11 @@ h5:hover{
     letter-spacing: 1px;
     font-family: 'Work Sans', sans-serif;
 }
+
 .panel p {
         margin-top: 20px;
         width: 90%;
+        color: #666;
     }
 .offer-names{
     margin-top: -10px;
@@ -402,46 +449,31 @@ h5:hover{
     font-size: 1em;
     transition: 0.4s;
     margin-top: 20px;
-    margin-bottom: -10px;
-  }
-  
-  .active, .accordion:hover {
-    background-color: #ccc;
-    color: #000;
-  }
-  
+  }  
   .accordion:after {
     content: '\002B';
     color: #777;
     font-weight: bold;
-    float: right;
+    float: left;
     margin-left: 5px;
+    padding-right: 15px;
   }
-  
-  .active:after {
+  .accordion.active:after {
     content: "\2212";
   }
-  
+  .column {
+    float: left;
+    width: 25%;
+    padding: 10px;
+  }
   .panel {
     padding: 0 18px;
     background-color: white;
     max-height: 0;
+    width: 90%;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
   }
-  /* .offer-images{
-      display: inline-flex;
-  }
-  .offer-images .carousel-inner{
-      display: inline-flex;
-  }
-.offer-images .carousel-inner img{
-    margin-left: 5px;
-    margin-top: 10px;
-    margin-right: 5px;
-    height: 100px;
-    width: 100px;
-} */
 .offer-photos .carousel-inner{
     display: inline-flex;
 }
@@ -451,19 +483,22 @@ h5:hover{
     margin-left: 15px;
     padding-right: -10px;
 }
-.active{
-    background-color: white;
-}
 .active:after {
     content: "";
     background: none;
+}
+.closebtn{
+    display: none;
+}
+.offer-photos .container{
+    width: 100%;
 }
 .sale{
     background: url('banner4.jpg');
     background-size: cover;
     background-position: fixed;
     min-height: 380px;
-    margin-top: 300px;
+    margin-top: 100px;
     text-align: center;
 }
 .sale h6{
@@ -481,11 +516,14 @@ h5:hover{
     color: aqua;
     font-weight: 800;
 }
-/* .sale .btn-wrap{
+.sale .btn-wrap{
         margin-left: 200px;
-} */
+}
 .pricing-plans .top-card{
     background-color: rgb(254,184,0);
+}
+.offer-photos .col-sm-3{
+    padding: 0px;
 }
 .top-card h3{
     font-weight: 100;
@@ -499,15 +537,6 @@ h5:hover{
     padding-right:0px;
     padding-bottom: 5px;
 }
-.pricing-plans .row .col-sm-4:nth-child(1):hover{
-    box-shadow:3px 3px 5px 6px #ccc;
-}
-.pricing-plans .row .col-sm-4:nth-child(2):hover{
-    box-shadow:3px 3px 5px 6px #ccc;
-}
-.pricing-plans .row .col-sm-4:nth-child(3):hover{
-    box-shadow:3px 3px 5px 6px #ccc;
-}
 .top-card .m1{
     font-size: 4em;
     font-weight: 600;
@@ -517,32 +546,27 @@ h5:hover{
     color: #fff;
     font-size: .875em;
 }
-.top-card:hover{
+/* .top-card:hover{
     background-color: #00acee;
-}
+} */
 .pricing-plans .row .col-sm-4:nth-child(1) .middle{
     background-color: rgba(255, 255, 255, 0.75);
 }
+.pricing-plans .row .col-sm-4{
+    margin-top: 50px;
+    overflow: hidden;
+}
+.pricing-plans .row .col-sm-4:hover{
+    transition: all 0.3s ease-in-out;
+}
+.pricing-plans .row .col-sm-4:nth-child(1):hover .top-card, .pricing-plans .row .col-sm-4:nth-child(2):hover .top-card, .pricing-plans .row .col-sm-4:nth-child(3):hover .top-card{
+    background-color: #00acee;
+}
+.pricing-plans .row .col-sm-4:nth-child(1):hover .bottom .btn, .pricing-plans .row .col-sm-4:nth-child(2):hover .bottom .btn, .pricing-plans .row .col-sm-4:nth-child(3):hover .bottom .btn{
+    background-color: #00acee;
+}
 .pricing-plans .row .col-sm-4:nth-child(2) .top-card{
     background-color: #e91e63;
-}
-.pricing-plans .row .col-sm-4:nth-child(1) .top-card:hover{
-    background-color: #00acee;
-}
-.pricing-plans .row .col-sm-4:nth-child(2) .top-card:hover{
-    background-color: #00acee;
-}
-.pricing-plans .row .col-sm-4:nth-child(3) .top-card:hover{
-    background-color: #00acee;
-}
-.pricing-plans .row .col-sm-4:nth-child(1) .bottom .btn:hover{
-    background-color: #00acee;
-}
-.pricing-plans .row .col-sm-4:nth-child(2) .bottom .btn:hover{
-    background-color: #00acee;
-}
-.pricing-plans .row .col-sm-4:nth-child(3) .bottom .btn:hover{
-    background-color: #00acee;
 }
 .pricing-plans .row .col-sm-4:nth-child(3) .top-card{
     background-color: #6cbc35;
@@ -565,20 +589,13 @@ h5:hover{
     color:#fff;
     padding: 0.7em 1.5em;
 }
-.pricing-plans .row .col-sm-4:nth-child(1) .middle{
-    background-color: rgba(255, 255, 255, 0.75);
+.pricing-plans .row .col-sm-4{
     border: 1px solid #eee;
+    padding-bottom: 30px;
+    margin-left: 0px;
 }
-.pricing-plans .row .col-sm-4:nth-child(2) .middle{
+.pricing-plans .row .col-sm-4:nth-child(1) .middle, .pricing-plans .row .col-sm-4:nth-child(2) .middle, .pricing-plans .row .col-sm-4:nth-child(3) .middle{
     background-color: rgba(255, 255, 255, 0.75);
-    border: 1px solid #eee;
-}
-.pricing-plans .row .col-sm-4:nth-child(3) .middle{
-    background-color: rgba(255, 255, 255, 0.75);
-    border: 1px solid #eee;
-}
-.pricing-plans .row .col-sm-4:nth-child(1):hover{
-    transition: ease-in-out 0.s;
 }
 .top-card .s2{
     top: 5px;
@@ -726,7 +743,7 @@ p.sub, p.tel, p.mail {
 
 /* Media Queries */
 
-@media(max-width:1366px){
+/* @media(max-width:1366px){
     
     .client p {
         padding-left: 20px;
@@ -762,4 +779,4 @@ p.sub, p.tel, p.mail {
     .left-content p {
         font-size: 20px;
     }
-}
+} */
