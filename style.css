@@ -405,7 +405,7 @@ h5{
 .gallery-col{
     width: 25%;
 }
-.gallery-inner{
+.gallery-col{
     display: flex; 
     flex-wrap: wrap;
     margin-top: 50px;
@@ -480,17 +480,17 @@ h5{
     padding: 10px;
   }
   .panel {
-    padding: 0 18px;
+    /* padding: 0 18px; */
     background-color: white;
     max-height: 0;
     width: 90%;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
   }
-.offer-photos .carousel-inner{
+/* .offer-photos .carousel-inner{
     display: inline-flex;
     margin-left: 16px;
-}
+} */
 .offer-photos .carousel-inner img{
     width: 100px;
     height: 100px;
@@ -505,7 +505,7 @@ h5{
 }
 .offer-photos .container{
     width: 100%;
-    margin-left: 15px;
+    /* margin-left: 15px; */
 }
 .sale{
     background: url('banner4.jpg');
@@ -540,10 +540,10 @@ h5{
 .offer-photos .col-sm-3{
     padding: 0px;
 }
-.offer-photos .container{
+/* .offer-photos .container{
     padding-left: 0px;
     padding-right: 0px;
-}
+} */
 .top-card h3{
     font-weight: 100;
     color: #fff;
@@ -1076,14 +1076,14 @@ iframe {
     .offer-heading h4{
         padding-left: 25px;
     }
-    .accordion{
+    /* .accordion{
         margin-left: 26px;
         padding: 10px;
-    }
+    } */
 }
 @media(max-width:500px){
     .home-logo h1 a{
-        font-size: 37px;
+        font-size: 30px;
     }
     nav.sidebar.navbar.navbar-expand-sm.navbar-wrapper{
         display: none;
@@ -1100,13 +1100,46 @@ iframe {
         padding-top: 20px;
     }
     .member-photo{
-        padding-left: 48px;
+        padding-left: 25px;
     }
     .social-icons{
-        padding-left: 44px;
+        padding-left: 18px;
+    }
+    .offer-photos .carousel-inner img{
+        height: 77px;
+        margin-left: 10px;
+    }
+    /* .offer-photos .container{
+        padding-left: 0px;
+        padding-right: 0px;
+    } */
+    .gallery{
+        margin: 0px;
+        padding: 0px;
+    }
+    .gallery-heading h2.blue-black-heading{
+        padding-bottom: 10px;
+    }
+    .gallery-col{
+        width: 100%;
+        margin: 0px;
+    }
+    .gallery-col img{
+        width: 100%;
+        height: auto !important;
+    }
+    .offer-names{
+        padding-left: 19px;
+    }
+    .panel p{
+        padding-top: 5px;
     }
     .left-content{
         width: 100%;
+        text-align: center;
+    }
+    .wrapper-image{
+        margin-left: 0px;
     }
     .right-content{
         width: 100%;
@@ -1128,20 +1161,30 @@ iframe {
     }
     .offer-heading h4{
         padding-left: 0px;
+        padding-top: 10px;
     }
-    .accordion{
+    /* .accordion{
         margin-left: 26px;
         padding: 10px;
-    }
+    } */
     .about-client h2.blue-black-heading{
         padding-top: 10px;
         font-size: 1.8em;
     }
+    .offers .offer-heading h4{
+        margin-left: 18px;
+    }
     .offer-heading h4{
         margin-top: 15px;
-        padding-left: 25px;
     }
-    .panel{
-        margin-left: 26px;
+    p.sub{
+        font-size: 14px;
+        margin-left: 0px;
+    }
+    p.tel{
+        margin-left: 0px;
+    }
+    p.mail{
+        margin-left: 0px;
     }
 }
