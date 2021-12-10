@@ -17,7 +17,12 @@ ul{
 img{
     max-width: 100%;
 }
-
+nav.sidebar.navbar.navbar-expand-sm.navbar-wrapper{
+    width: 100%;
+}
+ul.navbar-nav{
+    width: 100%;
+}
 .home-logo {
     background-color: black;
     text-align: center;
@@ -60,9 +65,9 @@ li.nav-item{
 	font-family: inherit;
 	outline: none;
 }
- .container .col-md-6 {
+ /* .container .col-md-6 {
     padding-left: 80px;
-} 
+}  */
  .home-logo a:hover{
     columns: white;
 }
@@ -124,11 +129,11 @@ li.nav-item{
     display: inline-block;
     font-family: '-apple-system, BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Open Sans', 'Helvetica Neue', sans-serif;
     padding-left: 0px;
-    margin-top: 5px;
+    margin: 0;
+    margin-bottom: 5px;
 }
 .navbar-nav .fa-phone{
     padding-left: 350px;
-    margin-top: 11px;
 }
 .dropdown-menu .dropdown-item{
     color: black;
@@ -256,9 +261,18 @@ span.stich::after{
     content: "";
     margin: 8px auto 0;
 }
+.client .carousel-indicators > li {
+    border-radius: 50%;
+    height: 15px;
+    width: 15px;
+    background-color: black;
+  }
 .about-content{
     display: flex;
     padding-top: 100px;
+}
+ .about-client span.stich{
+    color: #fff;
 }
 .left-content{
     width: 45%;
@@ -269,23 +283,22 @@ span.stich::after{
     font-family: 'Work Sans', sans-serif;
 }
 .left-content p{
-    font-size: 14px;
+    font-size: 17px;
     color: #717171;
     line-height: 2em;
     word-spacing: 1px;
 }
 .right-content{
     width: 55%;
-    position: relative;
 }
 .wrapper-image{
-    position: absolute;
     top: 0;
     left: 250px;
 }
 .wrapper-image img{
     width: 100%;
-    height: 100%;
+    max-width: 500px;
+    max-height: 500px;
 }
 .btn-wrap{
         margin-top: 20px;
@@ -307,7 +320,7 @@ a.btn.btn-primary.btn-sm:hover{
 .services{
     background-color: #000;
     padding: 20px 0;
-    margin-top: 180px;
+    margin-top: 40px;
 }
 /* .service-heading h2{
     font-size: 1.7em;
@@ -332,7 +345,7 @@ h5{
     font-weight: 900;
     padding-top: 20px;
     letter-spacing: 5px;   
-    text-align: center;
+    /* text-align: center; */
     color: #ffb910;
 }
 /* h5:hover{
@@ -418,15 +431,15 @@ h5{
     padding-left: 0px;
 }
 .offer-heading h4{
-    font-size: 1.3em;
+    font-size: 1.5em;
     color: #333;
     margin-top: 50px;
     margin-bottom: 1em;
     font-weight: 800;
-    letter-spacing: 1px;
+    letter-spacing: 5px;
     font-family: 'Work Sans', sans-serif;
 }
-
+.offer-photos .carousel-inner
 .panel p {
         margin-top: 20px;
         width: 90%;
@@ -476,11 +489,11 @@ h5{
   }
 .offer-photos .carousel-inner{
     display: inline-flex;
+    margin-left: 16px;
 }
 .offer-photos .carousel-inner img{
     width: 100px;
     height: 100px;
-    margin-left: 15px;
     padding-right: -10px;
 }
 .active:after {
@@ -492,14 +505,16 @@ h5{
 }
 .offer-photos .container{
     width: 100%;
+    margin-left: 15px;
 }
 .sale{
     background: url('banner4.jpg');
     background-size: cover;
     background-position: fixed;
-    min-height: 380px;
     margin-top: 100px;
     text-align: center;
+    padding-top: 10px;
+    padding-bottom: 100px;
 }
 .sale h6{
     font-size: 3em;
@@ -509,21 +524,25 @@ h5{
     color: #fff;
     padding-top: 3em;
     margin-bottom: 0.8em;
-    padding-left: 4em;
+
+}
+.sale .sale-task{
     text-align: center;
+    padding-left: 0px;
 }
 .sale span{
     color: aqua;
     font-weight: 800;
-}
-.sale .btn-wrap{
-        margin-left: 200px;
 }
 .pricing-plans .top-card{
     background-color: rgb(254,184,0);
 }
 .offer-photos .col-sm-3{
     padding: 0px;
+}
+.offer-photos .container{
+    padding-left: 0px;
+    padding-right: 0px;
 }
 .top-card h3{
     font-weight: 100;
@@ -590,7 +609,7 @@ h5{
     padding: 0.7em 1.5em;
 }
 .pricing-plans .row .col-sm-4{
-    border: 1px solid #eee;
+
     padding-bottom: 30px;
     margin-left: 0px;
 }
@@ -621,50 +640,59 @@ span.black {
 .bottom{
     padding-top: 30px;
 }
-.client .container-fluid{
-    margin-top: 100px;
-    background-color: #ff9000;
-    height: 600px;
+.client{
+    padding-top: 20px;
+    padding-bottom: 150px;
+    background-color: #00acee;
 }
 .client h5{
     color: #000;
     padding-top: 100px;
-    padding-right: 305px;
+    /* padding-right: 305px; */
     font-family: 'Work Sans', sans-serif;
     font-weight: 700;
 }
 .client p{
     color: #efefef;
-    font-size: 0.9em;
+    font-size: 1.1em;
     line-height: 2em;
     letter-spacing: 1px;
-    padding-left: 100px;
+    /* padding-left: 100px; */
 }
-.btn-wrapper {
+/* .btn-wrapper {
     padding-left: 96px;
+} */
+.client-review {
+    padding-left: 0px;
+    max-width: 500px;
 }
 .client-review a.btn{
     color:white;
-    background-color: black;
+    background-color: #ffb910;
     border-radius: 0px;
     border: none;
+    padding: 0.6em 1em;
 }
 
-.client-content{
+.client-content {
     text-align: center;
-    padding: 10px 0px;
-    border: 5px solid white;
+    padding: 3em 20px;
+    width: 100%;
+    border: 3px solid #027faf;
 }
 .client-content h4{
     padding: 15px 0px;
 }
 .client-content p{
-    text-align: center;
-    padding-left: 0px;
+    max-width: 310px;
+    font-size: 0.8em;
+    margin: 0 auto ;
 }
 .client-review a.btn:hover{
     color:black;
-    background-color: #00acee;
+    background-color: transparent;
+    border: none;
+    border-radius: 0px;
 }
 .carousel-item.active {
     background: none;
@@ -677,7 +705,7 @@ span.black {
 }
 .client-pic .carousel-indicators{
     position: relative;
-    top: 370px;
+    top: 410px;
 }
 .client-pic .carousel-caption h4{
     color: #212121;
@@ -690,7 +718,7 @@ input[type="text"]{
     margin-bottom: 1em;
     color: #888;
     border: 1px solid #dedede;
-    padding-right: 135px;
+    /* padding-right: 135px; */
     width: 100%;
     padding-left: 15px;
     padding-top: 15px;
@@ -706,10 +734,10 @@ input[type="email"]{
     padding-bottom: 15px;
     padding-left: 15px;
     background: #f9fcfd;
-    padding-right: 135px;
+    /* padding-right: 135px; */
 }
 textarea{
-    height: 100%;
+    /* height: 100%; */
     background: #f9fcfd;
     max-height: 100px;
     padding-top: 20px;
@@ -718,15 +746,20 @@ textarea{
     width:100%;
 }
 input#submit{
-    padding-left: 45px;
-    background-color: #ff9000;
+    background-color: #ffb900;
     color: #fff;
     text-decoration: none;
-    border: none;
-    padding-right: 45px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    border: 2px solid #ffb900;
+    padding: 13px 65px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    text-transform: uppercase;
     margin-top: 20px;
+}
+input#submit:hover{
+    background: #00acee;
+    border: 2px solid #00acee;
 }
 .address .fa.fa-map-marker, i.fa.fa-clock-o, i.fa.fa-phone, i.fa.fa.fa-envelope-o{
     border: 10px solid black;
@@ -735,48 +768,380 @@ input#submit{
     color: white;
 }
 .offer-heading p .sub{
+    color: #949393!important;
     margin-left: 15px;
 }
 p.sub, p.tel, p.mail {
     margin-left: 15px;
 }
 
+iframe {
+    padding-top: 100px;
+    width: 100%;
+}
+.coupons .row{
+    margin: 0;
+    padding: 0;
+}
+.coupons .col-md-3{
+    padding-left: 48px;
+    margin-bottom: 1em;
+}
+.coupons{
+    background-color: #00acee;
+    padding: 4em 0;
+    margin-top: 2px;
+}
+.coupon-wrapper{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.coupon-wrap{
+    border: 2px solid black;
+    width: 20%;
+    background-color: black;
+    color: #fff;
+}
+.left1 .fa:hover{
+    transition: all 0.3s ease-out;
+    background-color: #ffb900;
+}
+.left1 .fa{
+    font-size: 1.5em;
+    background-color: black;
+    color: white;
+    width: 70px;
+    height: 70px;
+    float: left;
+    padding-top: 20px;
+}
+.left2 h3{
+    font-size: 0.9em;
+    color: #fff;
+    margin: 0em 0 0.5em;
+    letter-spacing: 1px;
+    font-weight: 600;
+    font-family: 'Work Sans', sans-serif;
+}
+.left2{
+    text-align: left;
+    padding-left: 6.5em;
+}
+.left2 p{
+    padding-top: 0.3em;
+    color: #02687e;
+    font-size: 1em;
+    line-height: 1em;
+}
+
 /* Media Queries */
 
-/* @media(max-width:1366px){
-    
-    .client p {
-        padding-left: 20px;
+@media(max-width:1366px){
+    .home-logo .fa.fa-phone{
+        padding-left: 100px;
     }
-    .home-logo h1 a{
-        padding-top: 54px;
+    .carousel-caption{
+        top: 10px;
     }
-    .left-content h4 {
-        font-size: 30px;
-        margin-left: -5px;
-        margin-bottom: 10px;
+    /* .sale h6{
+        padding-top: 2em;
+    } */
+    .client p{
+        /* padding-left: 90px; */
     }
-    .left-content p {
-        font-size: 20px;
+
+    .client-content p{
+        text-align: center;
+        font-size: 1em;
+        padding: 0px
     }
-    .btn-wrapper{
-        padding-left: 18px;
+    .social-icons{
+        margin-left: -13px;
+    }
+    .client-content{
+        margin-left: 0px;
+        width: 100%;
+    }
+    /* .client-pic .carousel-indicators{
+        top: 438px;
+    } */
+    h3.design{
+        padding-top: 68px;
+        font-size: 2.3em;
+    }
+    .carousel-caption .delievery{
+        font-size: 1.2em;
+    }
+    p.suit{
+        font: 1.3em;
     }
 }
-@media(max-width:1202px){
+@media(max-width:1199px){
+    h3.design{
+        padding-top: 68px;
+        font-size: 2.3em;
+    }
+    .carousel-caption .delievery{
+        font-size: 1.2em;
+    }
+    p.suit{
+        font: 1.3em;
+    }
+}
+@media(max-width:1199px){
 
-    .client p {
+
+}
+@media(max-width:1140px){
+    
+
+}
+@media(max-width:1024px){
+    .home-logo .fa.fa-phone{
+        padding-left: 100px;
+    }
+    ul.navbar-nav{
+        justify-content: center;
+    }
+    .carousel-caption{
+        top: 10px;
+    }
+    h2.blue-black-heading{
+        font-size: 2.5em;
+    }
+    .sale{
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+    .sale-task{
         padding-left: 20px;
     }
+    .sale .btn-wrap{
+        margin-left: 0px;
+    }
+    .sale h6{
+        padding-left: 0px;
+        padding-top: 0px;
+    }
+    .client p{
+        /* padding-left: 46px; */
+    }
+    .client-content p{
+        text-align: center;
+        font-size: 1em;
+        padding: 0px;
+    }
+    /* .sale h6{
+        padding-left: 42px;
+    } */
+    .social-icons{
+        margin-left: -13px;
+    }
+    /* .btn-wrapper{
+        padding-left: 45px;
+    } */
+    .client-content{
+        margin-left: 0px;
+        width: 100%;
+    }
+    /* .client-pic .carousel-indicators{
+        top: 438px;
+    } */
+}
+ @media(max-width:1024px){
+    .home-logo{
+        padding: 0 0 1em 0;
+    }
+    .nav-item a::after{
+        display: none;
+    }
+    .nav-item .contact::before{
+        display: none;
+    }
+    .home-logo .fa.fa-phone{
+        padding-left: 0px;
+        padding-top: 4px;
+    }
+    .number{
+        margin-top: 7px;
+    }
+    .left1 .fa{
+        margin-bottom: 0.5em;
+    }
+    .client-pic .carousel-indicators{
+        top: 450px;
+    }
+}
+@media(max-width:768px){
+    .banner a.carousel-control-next{
+        display: none;
+    }
+    .banner a.carousel-control-prev{
+        display: none;
+    }
+    .banner .carousel-caption{
+        left: 25px;
+        right: 0px;
+    }
+    .about-content{
+        display: block;
+        padding-top: 20px;
+    }
+    .left-content{
+        width: 100%;
+    }
+    .right-content{
+        width: 100%;
+    }
+    .wrapper-image{
+        margin-left: 80px;
+    }
+    .client-pic .carousel-indicators{
+        top: 450px;
+    }
+    .social-icons ul{
+        padding-left: 57px;
+    }
+    input[type="text"]{
+        width: 100%;
+        /* min-width: 700px; */
+    }
+    input[type="email"]{
+        width: 100%;
+        /* min-width: 700px; */
+    }
+    textarea{
+        width: 100%;
+        /* min-width: 700px; */
+    }
+    a.btn.btn-primary.btn-lg{
+        padding: 0.5em 0.5em 0.5em 0.5em;
+        font-size: 1em;
+    }
+}
+
+@media(max-width:425px){
     .home-logo h1 a{
-        padding-top: 54px;
+        font-size: 37px;
     }
-    .left-content h4 {
-        font-size: 30px;
-        margin-left: -5px;
-        margin-bottom: 10px;
+    nav.sidebar.navbar.navbar-expand-sm.navbar-wrapper{
+        display: none;
     }
-    .left-content p {
-        font-size: 20px;
+    .about-wrapper h2.blue-black-heading{
+        font-size: 1.8em;
+        padding-top: 0px;
     }
-} */
+    .about-wrapper{
+        padding-top: 46px;
+    }
+    .about-content{
+        display: block;
+        padding-top: 20px;
+    }
+    .member-photo{
+        padding-left: 48px;
+    }
+    .left-content{
+        width: 100%;
+    }
+    .right-content{
+        width: 100%;
+        padding-top: 20px;
+    }
+    /* .client-pic .carousel-indicators{
+        top: 0px;
+    } */
+    .wrapper-image{
+        margin-left: 80px;
+    }
+    .social-icons{
+        padding-left: 44px;
+    }
+    .client h5{
+        padding-top: 0px;
+    }
+    .client-content {
+        padding: 1em;
+    }
+    .client-review{
+        text-align: center;
+        padding-left: 0px;
+        padding-top: 16px;
+    }
+    .about-client h2.blue-black-heading{
+        padding-top: 10px;
+        font-size: 1.8em;
+    }
+    .offer-heading h4{
+        padding-left: 25px;
+    }
+    .accordion{
+        margin-left: 26px;
+        padding: 10px;
+    }
+}
+@media(max-width:500px){
+    .home-logo h1 a{
+        font-size: 37px;
+    }
+    nav.sidebar.navbar.navbar-expand-sm.navbar-wrapper{
+        display: none;
+    }
+    .about-wrapper h2.blue-black-heading{
+        padding-top: 0px;
+        font-size: 1.8em;
+    }
+    .about-wrapper{
+        padding-top: 46px;
+    }
+    .about-content{
+        display: block;
+        padding-top: 20px;
+    }
+    .member-photo{
+        padding-left: 48px;
+    }
+    .social-icons{
+        padding-left: 44px;
+    }
+    .left-content{
+        width: 100%;
+    }
+    .right-content{
+        width: 100%;
+        padding-top: 20px;
+    }
+    .client h5{
+        padding-top: 0px;
+    }
+    .client-content {
+        padding: 1em;
+    }
+    .client-pic .carousel-indicators{
+        top: 380px;
+    }
+    .client-review{
+        text-align: center;
+        padding-left: 0px;
+        padding-top: 16px;
+    }
+    .offer-heading h4{
+        padding-left: 0px;
+    }
+    .accordion{
+        margin-left: 26px;
+        padding: 10px;
+    }
+    .about-client h2.blue-black-heading{
+        padding-top: 10px;
+        font-size: 1.8em;
+    }
+    .offer-heading h4{
+        margin-top: 15px;
+        padding-left: 25px;
+    }
+    .panel{
+        margin-left: 26px;
+    }
+}
