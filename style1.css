@@ -1,0 +1,10 @@
+.team-lead {
+    background-color: black;
+    text-align: center;
+    max-height: fit-content;
+    padding: 1.5em 0 1em 0;
+}
+.team-lead a{
+    color: white;
+    text-decoration: none;
+}

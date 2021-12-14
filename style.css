@@ -426,6 +426,7 @@ h5{
 }
 .gallery-col:nth-child(2) img, .gallery-col:nth-child(4) img{
     height: 275px;
+    width: 380px;
 }
 .offers .col-md-6 {
     padding-left: 0px;
@@ -441,7 +442,7 @@ h5{
 }
 .offer-photos .carousel-inner
 .panel p {
-        margin-top: 20px;
+        padding-top: 100px;
         width: 90%;
         color: #666;
     }
@@ -1092,6 +1093,10 @@ iframe {
     } */
 }
 @media(max-width:500px){
+
+     h3.design{
+        padding-top: 0px;
+    }
     .home-logo h1 a{
         font-size: 30px;
     }
